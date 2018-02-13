@@ -1,0 +1,23 @@
+# Projects
+# uncomment the urls if you wish to display them, and add your own URL
+
+# Monstrosity
+- project: Monstrosity
+  role: Sound Engineer, Composer
+  duration: 2017
+  url: "https://www.facebook.com/Monstrosity-1140425316079828/"
+  description: This short film won multiple awards in the LA Film Awards, NYC Indie Film Awards, Top Shorts, Festigious, AltFF, and most recently the Best Original Score at the Melbourne City Independent Film Awards.
+
+# Open House
+- project: SUTD Atlas
+  role: iOS Developer, Project Manager
+  duration: 2017
+  url: "https://itunes.apple.com/sg/app/sutd-atlas/id1195475297?mt=8"
+  description: The official companion app for SUTD's Open House 2017 allows visitors to track their indoor location and navigate around SUTD using Kontakt beacons
+
+# PreSense
+- project: PreSense
+  role: Primary Developer, Project Manager
+  duration: 2016
+  url: "https://github.com/chaychoong/PreSense"
+  description: Featured on <a href="https://api.slack.com/community">Slack</a> and <a href="https://community.estimote.com/hc/en-us/articles/202254358-How-do-I-build-my-first-app-Useful-resources">Estimote</a>, this tool allows teams using Estimote beacons to monitor their status, which can queried using a Slack chatbot.
