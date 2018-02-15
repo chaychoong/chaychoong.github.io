@@ -1,12 +1,12 @@
 # Jobs
 # Arup
-- company: Arup
+- company: <a href="https://www.arup.com/expertise/services/technical-consulting/acoustic-consulting">Arup</a>
   position: Consultant | Acoustic Consulting
   duration: Sept 2017 &mdash; Present
   summary: On top of my role as an Acoustic Consultant, I also<ul class="resume-item-list"><li>Participated in the development of an immersive facility that allows architects to visualise and auralise their designs</li><li>Developed conceptual designs and strategies for the Digital Services group</li><li>Assisted the digital transformation initiatives by Singapore's Consulting group</li></ul>
 
 # ST
-- company: ST Electronics (Info-Security)
+- company: <a href="http://www.digisafe.com">ST Electronics (Info-Security)</a>
   position: Industrial Attachment | Pre-Sales Security Consulting
   duration:  May &mdash; Aug 2016
   summary: Experimented with and created various solutions to monitor syslog data.<ul class="resume-item-list"><li>Designed log ingestion and management solutions capable of supporting large enterprises using NXLog, Apache Flume and Kafka</li><li>Developed MapReduce and Spark applications to process and analyse big data in real time</li></ul>

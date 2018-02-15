@@ -1,11 +1,11 @@
 # Skills
 # Music
 - skill: Music
-  description: Performs as a violist with The Philharmonic Orchestra (TPO), Braddell Heights Symphony Orchestra (BHSO) and Asian Cultural Symphony Orchestra (ACSO). Holds a Diploma in Piano Performance and writes classical music reviews occasionally for The Flying Inkpot.
+  description: Performs as a violist with The Philharmonic Orchestra (TPO), Braddell Heights Symphony Orchestra (BHSO) and Asian Cultural Symphony Orchestra (ACSO). Holds a Diploma in Piano Performance and <a href="http://medium.com/@choong">writes classical music reviews</a> occasionally for The Flying Inkpot.
 
 # Developer
 - skill: Programming
-  description: Game development and AR/VR with Unity, computer vision with OpenCV, tinkering with home automation, writing Telegram chatbots on Google App Engine, and designing with SOLIDWORKS.
+  description: Game development and AR/VR with Unity, computer vision with OpenCV, tinkering with home automation, <a href="https://github.com/chaychoong/expense-telegram-bot">writing Telegram chatbots</a> on Google App Engine, and designing with SOLIDWORKS.
 
 # Media
 - skill: Media
