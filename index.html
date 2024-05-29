@@ -9,8 +9,59 @@
   <title>chay.dev</title>
   <link href="/static/css/hack.css" rel="stylesheet">
   <style>
+    body {
+      background-color: #1e1e2e;
+      color: #cdd6f4;
+    }
+
+    strong,
+    strong>a {
+      color: #eba0ac;
+    }
+
+    a {
+      color: #eba0ac;
+      border-bottom: 1px solid #585b70
+    }
+
+    .hack h1 {
+      color: #89b4fa;
+    }
+
+    .hack h2 {
+      margin-top: 4rem;
+      color: #b4befe;
+    }
+
     .intro li {
       margin-bottom: 2em;
+    }
+
+    .landing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      text-align: center;
+    }
+
+    .ascii-container {
+      width: 100%;
+      max-width: 400px;
+      display: inline-block;
+
+      pre {
+        border: unset;
+        padding: unset;
+        margin: unset;
+        background-color: unset;
+        line-height: 1rem;
+      }
+    }
+
+    .separator {
+      color: gray;
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NQ10VZF6H"></script>
@@ -20,52 +71,194 @@
     gtag('js', new Date());
     gtag('config', 'G-3NQ10VZF6H');
   </script>
-  <base target="_blank">
 </head>
 
-<body class="hack">
-  <div class="main container intro">
-    <div>
-      <header>
-        <p>
-          chay.dev/<a href="/about" target="_self">about</a>
-        </p>
-      </header>
+<body>
+  <div class="landing">
+    <div class="ascii-container">
+      <pre>
+   ██████╗██╗  ██╗ █████╗ ██╗   ██╗
+  ██╔════╝██║  ██║██╔══██╗╚██╗ ██╔╝
+  ██║     ███████║███████║ ╚████╔╝ 
+  ██║     ██╔══██║██╔══██║  ╚██╔╝  
+  ╚██████╗██║  ██║██║  ██║   ██║   
+   ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+      </pre>
     </div>
     <div>
-      <p>I'm a Platform Engineer. That's my current favourite buzzword. Here are some others that I identify with:
-        DevOps, SRE, Infrastructure,
-        Cloud, Software Architecture, Backend.</p>
+      <a href="#bio">bio</a>
+      <span class="separator">|</span>
+      <a href="#resume">resume</a>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/chaychoong" target="_blank">linkedin</a>
+    </div>
+  </div>
+  <div class="hack">
+    <div class="main container">
+      <div id="bio">
+        <h1>Bio</h1>
+        <p>I'm a Platform Engineer. That's my current favourite buzzword. Here are some others that I identify with:
+          DevOps, SRE, Infrastructure,
+          Cloud, Software Architecture, Backend.</p>
 
-      <p>Some things about me:</p>
-      <ul class="ul-mb2">
-        <li>
-          I currently work at <a href="https://bifrost.ai/">Bifrost</a>, a startup that specialises in creating
-          realistic digital worlds using a mix of 3D tools - like Blender, Unreal Engine, Houdini - and a dash of
-          AI. I solve our infrastructure-related challenges, such as how we orchestrate our GPU-accelerated Windows
-          containers, or how we deploy our software stack on our clients' premises.
-        </li>
-        <li>
-          I have a <a href="https://istd.sutd.edu.sg/education/undergraduate/curriculum-overview">BEng in
-            Computer Science and Design</a> from SUTD, and I'm currently
-          pursuing a <a href="https://omscs.gatech.edu">MS in Computer Science</a> from Georgia Tech.
-        </li>
-        <li>
-          I enjoy tinkering with my dev setup. I use split ortho keyboards, polish my neovim configs every now
-          and then, distro-hop for fun, and practise hype-driven development on my homelab, which is currently
-          managed by a Nix setup that I'm rather fond of.
-        </li>
-        <li>
-          I dabble in classical music. I have helped organise Wagner operas with the <a
-            href="https://orchestra.sg">Orchestra of the Music Makers</a>, high-fived Martha Argerich for sharing
-          the same birthday, and automated backend processes for TwoSet Violin. I also occasionally play the viola
-          in Singapore-based community orchestras, and practise piano duets with my wife.
-        </li>
-        <li>
-          I love gaming! I've sunk more than 4000 hours in Dota, religiously purchase every generation of
-          Pokémon games, and consider BotW/TotK to be the best games ever.
-        </li>
-      </ul>
+        <p>Some things about me:</p>
+        <ul class="ul-mb2 intro">
+          <li>
+            I currently work at <a href="https://bifrost.ai/">Bifrost</a>, a startup that specialises in creating
+            realistic digital worlds using a mix of 3D tools - like Blender, Unreal Engine, Houdini - and a dash of
+            AI. I solve our infrastructure-related challenges, such as how we orchestrate our GPU-accelerated Windows
+            containers, or how we deploy our software stack on our clients' premises.
+          </li>
+          <li>
+            I have a <a href="https://istd.sutd.edu.sg/education/undergraduate/curriculum-overview">BEng in
+              Computer Science and Design</a> from SUTD, and I'm currently
+            pursuing a <a href="https://omscs.gatech.edu">MS in Computer Science</a> from Georgia Tech.
+          </li>
+          <li>
+            I enjoy tinkering with my dev setup. I use split ortho keyboards, polish my neovim configs every now
+            and then, distro-hop for fun, and practise hype-driven development on my homelab, which is currently
+            managed by a Nix setup that I'm rather fond of.
+          </li>
+          <li>
+            I dabble in classical music. I have helped organise Wagner operas with the <a
+              href="https://orchestra.sg">Orchestra of the Music Makers</a>, high-fived Martha Argerich for sharing
+            the same birthday, and automated backend processes for TwoSet Violin. I also occasionally play the viola
+            in Singapore-based community orchestras, and practise piano duets with my wife.
+          </li>
+          <li>
+            I love gaming! I've sunk more than 4000 hours in Dota, religiously purchase every generation of
+            Pokémon games, and consider BotW/TotK to be the best games ever.
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div id="resume">
+        <h1>Resume</h1>
+        <p>I have 7+ years of experience in designing software systems, writing backend applications, and implementing
+          DevOps and SRE practices.</p>
+        <div id="work">
+          <h2>Work</h2>
+          <ul>
+            <li><a href="https://bifrost.ai"><strong>Bifrost</strong></a>
+              <ul>
+                <li>
+                  <strong>Platform Engineer</strong><br />Jan 2022 - now
+                  <p>I build our software infrastructure. We have a variety of workloads: webapps, 3D applications (like
+                    Unreal, Blender, Houdini), Jupyter servers, etc. Some require GPUs, some are Windows-based. Some are
+                    run on the cloud, some are run on bare metal. We do on-prem, air-gapped deployments for some
+                    customers.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li><a href="https://motional.com"><strong>Motional</strong></a>
+              <ul>
+                <li>
+                  <strong>Site Reliability Engineer</strong><br />May 2020 - Jan 2022
+                  <p>I managed several Kubernetes clusters and lots of AWS accounts. I helped our engineering teams
+                    design
+                    and implement ops workflows, such as deployment, observability, CI/CD, infrastructure management.
+                  </p>
+                </li>
+                <li>
+                  <strong>Backend Engineer</strong><br />May 2018 - May 2020
+                  <p>I was a core developer on the fleet management team. We built a platform to monitor and manage our
+                    driverless vehicles. I worked with engineers from Uber and Lyft, and made our robotaxis available to
+                    their users.</p>
+                </li>
+              </ul>
+            </li>
+            <li><a href="https://arup.com"><strong>Arup</strong></a>
+              <ul>
+                <li>
+                  <strong>Digital Consultant</strong><br />Sept 2017 - May 2018
+                  <p>I coordinated the Consulting Group's digital transformation movement.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="education">
+          <h2>Education</h2>
+          <ul>
+            <li><a href="https://www.gatech.edu/"><strong>Georgia Institute of Technology</strong></a>
+              <ul>
+                <li><strong>MS Computer Science</strong><br />Aug 2023 - now</li>
+              </ul>
+            </li>
+            <li><a href="https://www.sutd.edu.sg/"><strong>Singapore University of Technology and Design</strong></a>
+              <ul>
+                <li><strong>BEng Computer Science and Design</strong><br />May 2014 - Sept 2017
+                  <p>I was president of the student government and TA-ed several courses.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="volunteering">
+          <h2>Volunteering</h2>
+          <ul>
+            <li><a href="https://orchestra.sg"><strong>Orchestra of the Music Makers</strong></a>
+              <ul>
+                <li><strong>Tech Lead</strong><br />Nov 2019 - now
+                  <p>I build tools to improve orchestra management workflows.</p>
+                </li>
+                <li><strong>Board Member</strong><br />Nov 2020 - Oct 2023
+                  <p>I supported administrative and concert operations.</p>
+                </li>
+              </ul>
+            </li>
+            <li><a href="https://www.tpo.org.sg/"><strong>The Philharmonic Orchestra</strong></a>
+              <ul>
+                <li><strong>Orchestra Management</strong><br />Sept 2018 - Nov 2019
+                  <p>I recruited a new management committee and led several projects.</p>
+                </li>
+              </ul>
+            </li>
+            <li><strong><a href="https://www.sutd.edu.sg/">SUTD</a> Alumni Association</strong>
+              <ul>
+                <li><strong>Founding Secretary</strong><br />Jan 2019 - Sept 2019
+                  <p>I assembled the founding committee and led the pilot fundraiser, which raised $100,000.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li><strong>Languages</strong>
+              <ul>
+                <li><strong>used these for work</strong>: python, golang, c#, sql, bash, [html, css, js/ts]</li>
+                <li><strong>used these for school</strong>: java, c, c++</li>
+                <li><strong>used these for side projects</strong>: elixir, rust</li>
+              </ul>
+            </li>
+            <li><strong>Dev</strong>
+              <ul>
+                <li><strong>backend</strong>: express, flask, fastapi, litestar, go-chi</li>
+                <li><strong>frontend</strong>: htmx, react</li>
+                <li><strong>fullstack</strong>: phoenix</li>
+                <li><strong>linux</strong>: ubuntu, nixos</li>
+                <li><strong>vcs</strong>: git, jujutsu, perforce</li>
+                <li><strong>database</strong>: postgres, dynamodb</li>
+                <li><strong>workflow orchestration</strong>: airflow, argo, temporal</li>
+              </ul>
+            </li>
+            <li><strong>Ops</strong>
+              <ul>
+                <li><strong>cloud</strong>: aws, gcp, digital ocean</li>
+                <li><strong>workload orchestration</strong>: kubernetes, nomad</li>
+                <li><strong>infra-as-code</strong>: ansible, terraform, helm, pkl, nix</li>
+                <li><strong>virtualisation</strong>: proxmox, hyper-v</li>
+                <li><strong>networking</strong>: opnsense, wireguard</li>
+                <li><strong>ci/cd</strong>: argocd, gitlab cicd, github actions</li>
+                <li><strong>observability</strong>: vector, grafana, prometheus, victoriametrics, honeycomb</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </body>
