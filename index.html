@@ -7,34 +7,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Chay Choong's personal site">
   <title>chay.dev</title>
-  <link href="/static/css/hack.css" rel="stylesheet">
+  <!-- 
+    landing style inspired by https://tinygrad.org
+    content style inspired by https://sukima.github.io/hackcss-ext
+  -->
   <style>
+    /* @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css'); */
+    :root {
+      --ctp-mocha-rosewater: #f5e0dc;
+      --ctp-mocha-flamingo: #f2cdcd;
+      --ctp-mocha-pink: #f5c2e7;
+      --ctp-mocha-mauve: #cba6f7;
+      --ctp-mocha-red: #f38ba8;
+      --ctp-mocha-maroon: #eba0ac;
+      --ctp-mocha-peach: #fab387;
+      --ctp-mocha-yellow: #f9e2af;
+      --ctp-mocha-green: #a6e3a1;
+      --ctp-mocha-teal: #94e2d5;
+      --ctp-mocha-sky: #89dceb;
+      --ctp-mocha-sapphire: #74c7ec;
+      --ctp-mocha-blue: #89b4fa;
+      --ctp-mocha-lavender: #b4befe;
+      --ctp-mocha-text: #cdd6f4;
+      --ctp-mocha-subtext1: #bac2de;
+      --ctp-mocha-subtext0: #a6adc8;
+      --ctp-mocha-overlay2: #9399b2;
+      --ctp-mocha-overlay1: #7f849c;
+      --ctp-mocha-overlay0: #6c7086;
+      --ctp-mocha-surface2: #585b70;
+      --ctp-mocha-surface1: #45475a;
+      --ctp-mocha-surface0: #313244;
+      --ctp-mocha-base: #1e1e2e;
+      --ctp-mocha-mantle: #181825;
+      --ctp-mocha-crust: #11111b;
+
+      --color-base: var(--ctp-mocha-base);
+      --color-text: var(--ctp-mocha-text);
+      --color-accent: var(--ctp-mocha-flamingo);
+      --color-light: var(--ctp-mocha-surface2);
+      --color-h1: var(--ctp-mocha-maroon);
+      --color-h2: var(--ctp-mocha-peach);
+    }
+
     body {
-      background-color: #1e1e2e;
-      color: #cdd6f4;
+      font-size: 16px;
+      font-family: Menlo, monospace;
+      text-rendering: geometricPrecision;
+      line-height: 1.5rem;
+      background-color: var(--color-base);
+      color: var(--color-text);
+      box-sizing: border-box;
     }
 
     strong,
     strong>a {
-      color: #eba0ac;
+      color: var(--color-accent);
     }
 
     a {
-      color: #eba0ac;
-      border-bottom: 1px solid #585b70
+      cursor: pointer;
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-light);
     }
 
-    .hack h1 {
-      color: #89b4fa;
+    a:hover {
+      background-color: var(--color-light);
+      color: var(--color-text);
     }
 
-    .hack h2 {
-      margin-top: 4rem;
-      color: #b4befe;
+    h1,
+    h2 {
+      font-size: 1rem;
+      position: relative;
     }
 
-    .intro li {
-      margin-bottom: 2em;
+    h1 {
+      display: table-cell;
+      overflow: hidden;
+      margin: 0;
+      padding: 20px 0 30px;
+      color: var(--color-h1);
+    }
+
+    h1:after {
+      content: "=================";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+    }
+
+    h2 {
+      margin: 4rem 0 0 0;
+      color: var(--color-h2);
+    }
+
+    h2:before {
+      content: "## "
+    }
+
+    ul {
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    li {
+      display: block;
+      position: relative;
+      padding: 0 0 0 20px;
+    }
+
+    ul>li:after {
+      content: "- ";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    hr {
+      margin: 100px 0 20px 0;
+      border: 0;
+      border-bottom: 1px dashed var(--color-light);
     }
 
     .landing {
@@ -52,6 +145,7 @@
       display: inline-block;
 
       pre {
+        color: var(--color-accent);
         border: unset;
         padding: unset;
         margin: unset;
@@ -62,6 +156,16 @@
 
     .separator {
       color: gray;
+    }
+
+    .main {
+      margin: 0 auto;
+      padding: 0 1rem;
+      max-width: 70rem;
+    }
+
+    .intro li {
+      margin-bottom: 2em;
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NQ10VZF6H"></script>
@@ -76,6 +180,7 @@
 <body>
   <div class="landing">
     <div class="ascii-container">
+      <!-- Generated using https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=chay -->
       <pre>
    ██████╗██╗  ██╗ █████╗ ██╗   ██╗
   ██╔════╝██║  ██║██╔══██╗╚██╗ ██╔╝
@@ -93,8 +198,8 @@
       <a href="https://linkedin.com/in/chaychoong" target="_blank">linkedin</a>
     </div>
   </div>
-  <div class="hack">
-    <div class="main container">
+  <div class="main">
+    <div>
       <div id="bio">
         <h1>Bio</h1>
         <p>I'm a Platform Engineer. That's my current favourite buzzword. Here are some others that I identify with:
@@ -102,12 +207,12 @@
           Cloud, Software Architecture, Backend.</p>
 
         <p>Some things about me:</p>
-        <ul class="ul-mb2 intro">
+        <ul class="intro">
           <li>
             I currently work at <a href="https://bifrost.ai/">Bifrost</a>, a startup that specialises in creating
-            realistic digital worlds using a mix of 3D tools - like Blender, Unreal Engine, Houdini - and a dash of
-            AI. I solve our infrastructure-related challenges, such as how we orchestrate our GPU-accelerated Windows
-            containers, or how we deploy our software stack on our clients' premises.
+            realistic digital worlds using 3D software, with a dash of AI. I solve our infrastructure-related
+            challenges, such as how we orchestrate our GPU-accelerated Windows containers, or how we deploy our software
+            stack on our clients' premises.
           </li>
           <li>
             I have a <a href="https://istd.sutd.edu.sg/education/undergraduate/curriculum-overview">BEng in
