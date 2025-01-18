@@ -12,6 +12,10 @@
     content style inspired by https://sukima.github.io/hackcss-ext
   -->
   <style>
+    @font-face {
+      font-family: 'Opus One';
+      src: url(OpusOneVF.woff2) format('woff2');
+    }
     /* @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css'); */
     :root {
       --ctp-mocha-rosewater: #f5e0dc;
@@ -70,7 +74,7 @@
 
     body {
       font-size: 16px;
-      font-family: Menlo, monospace;
+      font-family: Opus One, monospace;
       text-rendering: geometricPrecision;
       line-height: 1.5rem;
       background-color: var(--color-base);
