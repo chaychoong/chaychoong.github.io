@@ -1,45 +1,51 @@
-<div id="work">
-  <h2>Work</h2>
-  <ul>
-    <li>
-      <a href="https://bifrost.ai" target="_blank"><strong>Bifrost</strong></a>
-      <ul>
-        <li>
-          <strong>Platform Engineer</strong><br />
-          <weak>Jan 2022 - now</weak>
-          <p>
-            High-quality computer vision models are trained on high-quality
+---
+interface Job {
+  title: string;
+  period: string;
+  description: string;
+}
+
+interface Company {
+  name: string;
+  url: string;
+  jobs: Job[];
+}
+
+const companies: Company[] = [
+  {
+    name: "Bifrost",
+    url: "https://bifrost.ai",
+    jobs: [
+      {
+        title: "Platform Engineer",
+        period: "Jan 2022 - now",
+        description: `High-quality computer vision models are trained on high-quality
             data, which can be hard to obtain. Bifrost specialises in using 3D
             graphics techniques to generate perfectly labelled, photorealistic
             synthetic data.<br /><br />
             We have a diverse tech stack, including webapps, 3D applications (Unreal,
             Blender, Houdini), streaming servers, ML pipelines. I design how everything
             is pieced together, and solve infrastructure challenges, such as how
-            to run GPU-enabled Windows containers on Kubernetes.
-          </p>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="https://motional.com" target="_blank"
-        ><strong>Motional</strong></a
-      >
-      <ul>
-        <li>
-          <strong>Site Reliability Engineer</strong><br />
-          <weak>May 2020 - Jan 2022</weak>
-          <p>
-            At some point, Motional became big enough to warrant the creation of
+            to run GPU-enabled Windows containers on Kubernetes.`,
+      },
+    ],
+  },
+  {
+    name: "Motional",
+    url: "https://motional.com",
+    jobs: [
+      {
+        title: "Site Reliability Engineer",
+        period: "May 2020 - Jan 2022",
+        description: `At some point, Motional became big enough to warrant the creation of
             an SRE team. I created a central monitoring stack, standardised
             observability practices across all engineering teams, and maintained
-            several Kubernetes clusters and hundreds of AWS accounts.
-          </p>
-        </li>
-        <li>
-          <strong>Backend Engineer</strong><br />
-          <weak>May 2018 - May 2020</weak>
-          <p>
-            Autonomous vehicles encounter unexpected events all the time, so the
+            several Kubernetes clusters and hundreds of AWS accounts.`,
+      },
+      {
+        title: "Backend Engineer",
+        period: "May 2018 - May 2020",
+        description: `Autonomous vehicles encounter unexpected events all the time, so the
             Fleet team created a
             <a
               href="https://motional.com/news/controlling-fleet-motionals-command-center-gives-detailed-glimpse-av-performance"
@@ -62,19 +68,18 @@
               href="https://techcrunch.com/2020/10/27/via-and-hyundai-aptiv-joint-venture-to-offer-shared-robotaxi-rides-next-year/"
               target="_blank">Via</a
             >
-            to integrate our robotaxis into their networks.
-          </p>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="https://arup.com" target="_blank"><strong>Arup</strong></a>
-      <ul>
-        <li>
-          <strong>Digital Consultant</strong><br />
-          <weak>Sept 2017 - May 2018</weak>
-          <p>
-            Arup started an internal digital transformation movement, and
+            to integrate our robotaxis into their networks.`,
+      },
+    ],
+  },
+  {
+    name: "Arup",
+    url: "https://arup.com",
+    jobs: [
+      {
+        title: "Digital Consultant",
+        period: "Sept 2017 - May 2018",
+        description: `Arup started an internal digital transformation movement, and
             employees with cool ideas were given budget and time to work on
             them. I helped many teams from the Consulting group turn their ideas
             into reality. <br /><br />
@@ -84,10 +89,34 @@
               target="_blank">ExperienceLab</a
             >
             in VR to convince the MD that it would be worth the investment. Spoiler:
-            it was.
-          </p>
+            it was.`,
+      },
+    ],
+  },
+];
+---
+
+<div id="work">
+  <h2>Work</h2>
+  <ul>
+    {
+      companies.map((company) => (
+        <li>
+          <a href={company.url} target="_blank">
+            <strong>{company.name}</strong>
+          </a>
+          <ul>
+            {company.jobs.map((job) => (
+              <li>
+                <strong>{job.title}</strong>
+                <br />
+                <weak>{job.period}</weak>
+                <p set:html={job.description} />
+              </li>
+            ))}
+          </ul>
         </li>
-      </ul>
-    </li>
+      ))
+    }
   </ul>
 </div>

@@ -1,30 +1,49 @@
+---
+interface Education {
+  institution: string;
+  url: string;
+  degree: string;
+  period: string;
+  description?: string;
+}
+
+const educations: Education[] = [
+  {
+    institution: "Georgia Institute of Technology",
+    url: "https://www.gatech.edu/",
+    degree: "MS Computer Science",
+    period: "Aug 2023 - now",
+  },
+  {
+    institution: "Singapore University of Technology and Design",
+    url: "https://www.sutd.edu.sg/",
+    degree: "BEng Computer Science and Design",
+    period: "May 2014 - Sept 2017",
+    description:
+      "I was president of the student government and TA-ed several courses.",
+  },
+];
+---
+
 <div id="education">
   <h2>Education</h2>
   <ul>
-    <li>
-      <a href="https://www.gatech.edu/" target="_blank"
-        ><strong>Georgia Institute of Technology</strong></a
-      >
-      <ul>
+    {
+      educations.map((edu) => (
         <li>
-          <strong>MS Computer Science</strong><br />
-          <weak>Aug 2023 - now</weak>
+          <a href={edu.url} target="_blank">
+            <strong>{edu.institution}</strong>
+          </a>
+          <ul>
+            <li>
+              <strong>{edu.degree}</strong>
+              <br />
+              <weak>{edu.period}</weak>
+              {edu.description && <p>{edu.description}</p>}
+            </li>
+          </ul>
         </li>
-      </ul>
-    </li>
-    <li>
-      <a href="https://www.sutd.edu.sg/" target="_blank"
-        ><strong>Singapore University of Technology and Design</strong></a
-      >
-      <ul>
-        <li>
-          <strong>BEng Computer Science and Design</strong><br />
-          <weak>May 2014 - Sept 2017</weak>
-          <p>
-            I was president of the student government and TA-ed several courses.
-          </p>
-        </li>
-      </ul>
-    </li>
+      ))
+    }
   </ul>
 </div>
